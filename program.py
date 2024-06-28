@@ -1,6 +1,9 @@
-def sample():
-    print("hello world")
-    print("person1")
-    print("person2")
+day = input("Enter the day of the week: ").capitalize()
 
-sample()
+match day:
+    case "Saturday" | "Sunday":
+        print(f"{day} is a weekend.")
+    case "Monday" | "Tuesday" | "Wednesday" | "Thursday" | "Friday":
+        print(f"{day} is a weekday.")
+    case _:
+        print("That's not a valid day of the week.")
